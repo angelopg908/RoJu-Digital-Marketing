@@ -378,6 +378,44 @@ nav{
 .phone-metric{margin-top:auto;padding:12px;background:var(--cream);border-radius:12px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
 .phone-metric strong{font-family:'Fraunces',serif;font-size:18px;color:var(--purple)}
 
+/* Visual 3: Content feed mock */
+.v3 .mock-feed{
+  left:14%;right:14%;top:6%;bottom:6%;
+  border-radius:24px;background:#fff;padding:14px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.feed-header{display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.feed-dots{margin-left:auto;color:var(--muted);font-size:14px;letter-spacing:1px}
+.feed-image{
+  position:relative;flex:1;min-height:0;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#FFB8D1 0%,#A78BFA 50%,#5EEAD4 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.feed-tag{
+  position:absolute;top:10px;left:10px;
+  background:rgba(0,0,0,0.55);color:#fff;
+  font-size:9px;font-weight:700;letter-spacing:0.1em;
+  padding:4px 8px;border-radius:6px;
+}
+.feed-play{
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,0.92);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;padding-left:3px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.18);
+}
+.feed-views{
+  position:absolute;bottom:10px;right:10px;
+  background:rgba(0,0,0,0.55);color:#fff;
+  font-size:10px;font-weight:600;
+  padding:4px 8px;border-radius:6px;
+}
+.feed-actions{display:flex;gap:14px;font-size:18px;line-height:1}
+.feed-caption{font-size:11px;line-height:1.45;color:var(--ink)}
+.feed-caption strong{display:block;font-size:11px;margin-bottom:3px}
+.feed-caption p{margin:0;color:var(--ink-soft)}
+.feed-caption p strong{display:inline;margin:0;color:var(--ink)}
+
 /* ---------- EMAIL CAPTURE ---------- */
 .capture{
   background:var(--purple);color:#fff;padding:90px 0;
@@ -537,11 +575,6 @@ footer{background:var(--ink);color:var(--cream);padding:80px 0 40px}
 </style>
 </head>
 <body>
-
-<!-- TOP BAR -->
-<div class="topbar">
-  ¡Hola! Reserva una consulta gratuita de 30 min antes del 30 de abril. <a href="#capture">Agendar ahora →</a>
-</div>
 
 <!-- NAV -->
 <nav>
@@ -809,49 +842,46 @@ footer{background:var(--ink);color:var(--cream);padding:80px 0 40px}
 
     <div class="detail-row reveal">
       <div class="detail-text">
-        <span class="eyebrow">Automatizaciones</span>
-        <h2>Respondé a tus clientes <em>hasta cuando dormís.</em></h2>
-        <p>Flujos de email, WhatsApp y DMs que se activan solos. Tu cliente recibe el mensaje correcto, en el momento correcto, y vos podés dedicarte a lo que de verdad importa.</p>
+        <span class="eyebrow">Creación de contenido</span>
+        <h2>Contenido que <em>sí se mira</em> (y se comparte).</h2>
+        <p>Reels, posts, fotos y videos pensados para tu marca y tu audiencia real. Nada de plantillas genéricas ni stock aburrido: producimos contenido con intención, que para el scroll y conecta de verdad.</p>
         <ul class="detail-list">
-          <li><span class="check">✓</span> Flujos de bienvenida y post-compra</li>
-          <li><span class="check">✓</span> Recuperación de carritos abandonados</li>
-          <li><span class="check">✓</span> Integración con Tilopay, SINPE Móvil y WhatsApp</li>
+          <li><span class="check">✓</span> Reels y videos cortos para Instagram, TikTok y YouTube Shorts</li>
+          <li><span class="check">✓</span> Fotografía de producto, lifestyle y detrás-de-cámara</li>
+          <li><span class="check">✓</span> Calendario de contenido mensual con copy listo para publicar</li>
+          <li><span class="check">✓</span> Diseño de carruseles, historias y plantillas para tu marca</li>
         </ul>
       </div>
       <div class="detail-visual v3">
-        <div class="mock-card mock-phone">
-          <div class="phone-header">
+        <div class="mock-card mock-feed">
+          <div class="feed-header">
             <div class="phone-avatar">R</div>
             <div>
-              <div class="phone-name">RoJu Studio</div>
-              <div class="phone-sub">en línea</div>
+              <div class="phone-name">rojustudio</div>
+              <div class="phone-sub">Patrocinado</div>
             </div>
+            <div class="feed-dots">•••</div>
           </div>
-          <div class="message">¡Hola! Gracias por tu compra 💜</div>
-          <div class="message">Tu pedido llega el lunes entre 9am–12pm.</div>
-          <div class="message sent">¡Perfecto, muchas gracias!</div>
-          <div class="message">¿Querés un 15% off en tu próxima orden?</div>
+          <div class="feed-image">
+            <span class="feed-tag">REEL</span>
+            <span class="feed-play">▶</span>
+            <span class="feed-views">128K vistas</span>
+          </div>
+          <div class="feed-actions">
+            <span>♥</span><span>💬</span><span>↗</span>
+          </div>
+          <div class="feed-caption">
+            <strong>4,287 me gusta</strong>
+            <p><strong>rojustudio</strong> el secreto detrás de un buen reel no es el equipo, es la idea ✨</p>
+          </div>
           <div class="phone-metric">
-            <span>Tasa de respuesta</span>
-            <strong>94%</strong>
+            <span>Engagement promedio</span>
+            <strong>+312%</strong>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- EMAIL CAPTURE -->
-<section class="capture" id="capture">
-  <div class="container capture-inner reveal">
-    <h2>Recibí tips de marketing <em>cada martes.</em></h2>
-    <p>Sin spam, sin relleno. Solo cosas que de verdad sirven para hacer crecer tu negocio, en menos de 5 minutos de lectura.</p>
-    <form class="capture-form" onsubmit="event.preventDefault(); handleSubscribe(this);">
-      <input type="email" placeholder="tu@correo.com" required aria-label="Email">
-      <button type="submit">Suscribirme</button>
-    </form>
-    <p class="capture-fine">Al suscribirte aceptás recibir correos de RoJu Studio. Te podés dar de baja cuando querás.</p>
   </div>
 </section>
 
