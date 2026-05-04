@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RoJu Digital Marketing | Marketing que hace a los pequeños negocios inolvidables</title>
+<meta name="description" content="RoJu Digital Marketing es una agencia de marketing para emprendedores pequeños y medianos. Branding, contenido, campañas, y crecimiento, hecho con amor." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- TOKENS ---------- */
+:root{
+  --purple: #193751;
+  --purple-deep: #0E2235;
+  --purple-soft: #DDE7F0;
+  --cream: #FBF5E6;        /* warm beige hero */
+  --cream-deep: #F4EBD2;
+  --mint: #F1FAEE;         /* soft mint for feature/faq sections */
+  --ink: #14121C;
+  --ink-soft: #3B3448;
+  --muted: #6B6478;
+  --yellow: #FFD54A;
+  --red: #C23B3B;
+  --white: #FFFFFF;
+  --line: rgba(20,18,28,0.12);
+  --shadow-sm: 0 1px 2px rgba(20,18,28,0.06), 0 2px 8px rgba(20,18,28,0.05);
+  --shadow-md: 0 8px 24px rgba(20,18,28,0.08), 0 2px 6px rgba(20,18,28,0.05);
+  --shadow-lg: 0 24px 60px rgba(25,55,81,0.18), 0 6px 16px rgba(20,18,28,0.08);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+}
+
+/* ---------- RESET ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter', system-ui, sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none}
+h1,h2,h3,h4{font-family:'Fraunces', Georgia, serif;font-weight:600;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);margin:0}
+p{margin:0}
+
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+
+/* ---------- NAV ---------- */
+.topbar{
+  background:var(--ink);
+  color:var(--cream);
+  text-align:center;
+  padding:10px 20px;
+  font-size:14px;
+}
+.topbar a{color:var(--yellow);text-decoration:underline;font-weight:600}
+
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,245,230,0.92);
+  backdrop-filter:saturate(1.4) blur(14px);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 28px;max-width:1300px;margin:0 auto;
+}
+.logo{
+  display:flex;align-items:center;gap:6px;
+  transition:transform .2s ease;
+}
+.logo:hover{transform:scale(1.03)}
+.logo-img{
+  height:48px;width:auto;display:block;
+  border-radius:10px;
+}
+.logo-dot{
+  width:10px;height:10px;border-radius:50%;background:var(--purple);
+  display:inline-block;box-shadow:0 0 0 4px rgba(25,55,81,0.18);
+}
+
+/* Footer logo: white rounded container so navy logo stays legible on dark bg */
+.foot-logo-wrap{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--mint);
+  padding:10px 14px;border-radius:14px;
+  margin-bottom:20px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.15);
+}
+.foot-logo-img{
+  height:44px;width:auto;display:block;
+}
+.nav-links{display:flex;gap:32px;align-items:center;font-size:15px;font-weight:500}
+.nav-links a{transition:color .2s ease}
+.nav-links a:hover{color:var(--purple)}
+.nav-cta{display:flex;gap:12px;align-items:center}
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:13px 22px;border-radius:var(--radius-pill);
+  font-weight:600;font-size:15px;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-primary:hover{background:var(--purple-deep);transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-yellow:hover{background:#FFC62E;transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{background:#000;transform:translateY(-1px)}
+
+.hamburger{display:none;width:40px;height:40px;border-radius:8px;padding:10px}
+.hamburger span{display:block;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--cream);
+  position:relative;overflow:hidden;
+  padding:80px 0 90px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 1px 1px, rgba(20,18,28,0.07) 1px, transparent 0);
+  background-size:22px 22px;
+  opacity:.5;pointer-events:none;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;
+  position:relative;z-index:1;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--purple);
+  padding:8px 14px;border-radius:var(--radius-pill);
+  background:var(--purple-soft);
+  margin-bottom:24px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;background:var(--purple);border-radius:50%}
+.hero h1{
+  font-size:clamp(44px,6vw,82px);
+  letter-spacing:-0.035em;
+  font-weight:600;
+  margin-bottom:22px;
+}
+.hero h1 em{
+  font-style:italic;font-weight:400;
+  color:var(--purple);
+  font-family:'Fraunces', serif;
+}
+.hero h1 .underline{
+  position:relative;display:inline-block;
+}
+.hero h1 .underline::after{
+  content:"";position:absolute;left:-4px;right:-4px;bottom:6px;height:14px;
+  background:var(--yellow);z-index:-1;border-radius:4px;
+  transform:skew(-6deg);
+}
+.hero p.lead{
+  font-size:19px;color:var(--ink-soft);max-width:520px;margin-bottom:32px;line-height:1.55;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hero-meta{display:flex;gap:26px;font-size:14px;color:var(--ink-soft);flex-wrap:wrap}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.check{
+  display:inline-flex;width:18px;height:18px;border-radius:50%;
+  background:var(--purple);color:#fff;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;
+}
+
+/* Hero visual */
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:520px;justify-self:end;width:100%}
+.visual-blob{
+  position:absolute;inset:0;
+  background:var(--purple);
+  border-radius:48% 52% 68% 32% / 42% 48% 52% 58%;
+  transform:rotate(-6deg);
+  box-shadow:0 40px 80px rgba(25,55,81,0.25);
+  animation:blobMorph 12s ease-in-out infinite;
+}
+@keyframes blobMorph{
+  0%,100%{border-radius:48% 52% 68% 32% / 42% 48% 52% 58%;transform:rotate(-6deg)}
+  50%{border-radius:58% 42% 38% 62% / 52% 58% 42% 48%;transform:rotate(-3deg)}
+}
+.visual-inner{
+  position:absolute;inset:28px;
+  background:linear-gradient(135deg, #FFE5B4 0%, #FFB8D1 100%);
+  border-radius:46% 54% 66% 34% / 40% 46% 54% 60%;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.visual-inner svg{width:88%;height:auto;transform:translateY(2%)}
+
+/* Floating cards */
+.float-card{
+  position:absolute;background:#fff;border-radius:var(--radius-md);
+  padding:14px 16px;box-shadow:var(--shadow-md);
+  display:flex;align-items:center;gap:12px;
+  font-size:13px;font-weight:500;
+}
+.float-card .dot{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fc-1{top:8%;left:-12%;animation:float 6s ease-in-out infinite}
+.fc-2{top:52%;right:-10%;animation:float 7s ease-in-out infinite .8s}
+.fc-3{bottom:4%;left:6%;animation:float 6.5s ease-in-out infinite .4s}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* Stars decorative */
+.star{
+  position:absolute;width:34px;height:34px;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,0.1));
+}
+.star-1{top:12%;right:5%;animation:spin 22s linear infinite}
+.star-2{bottom:14%;right:48%;width:26px;animation:spin 18s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- SECTION HEAD ---------- */
+.section{padding:120px 0;position:relative}
+.section-head{text-align:center;max-width:680px;margin:0 auto 64px}
+.section-head h2{font-size:clamp(36px,4.5vw,58px);margin-bottom:16px}
+.section-head h2 em{font-style:italic;color:var(--purple);font-weight:500}
+.section-head p{color:var(--muted);font-size:17px}
+
+/* ---------- FEATURES (3 col) ---------- */
+.features{background:var(--mint);position:relative}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.feat-card{
+  padding:36px 30px;border-radius:var(--radius-lg);
+  background:var(--cream);border:1px solid var(--line);
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  position:relative;overflow:hidden;
+}
+.feat-card::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 100% 0%, rgba(25,55,81,0.08), transparent 50%);
+  opacity:0;transition:opacity .3s ease;
+}
+.feat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple)}
+.feat-card:hover::before{opacity:1}
+.feat-icon{
+  width:56px;height:56px;border-radius:16px;
+  background:var(--purple);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:22px;
+  position:relative;z-index:1;
+}
+.feat-card:nth-child(2) .feat-icon{background:var(--yellow);color:var(--ink)}
+.feat-card:nth-child(3) .feat-icon{background:var(--red);color:#fff}
+.feat-card h3{font-size:24px;margin-bottom:10px;position:relative;z-index:1}
+.feat-card p{color:var(--ink-soft);font-size:15px;position:relative;z-index:1}
+
+/* ---------- SOCIAL PROOF ---------- */
+.proof{background:var(--ink);color:var(--cream);padding:80px 0}
+.proof h3{
+  text-align:center;color:var(--cream);
+  font-size:22px;font-weight:500;margin-bottom:40px;
+  font-family:'Inter',sans-serif;letter-spacing:-0.01em;
+}
+.proof h3 strong{color:var(--yellow);font-weight:700}
+.logo-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:40px;align-items:center;
+  opacity:.82;
+}
+.brand-logo{
+  text-align:center;font-family:'Fraunces',serif;
+  font-size:26px;font-weight:700;letter-spacing:-0.02em;
+  color:var(--cream);opacity:.75;transition:opacity .2s;
+}
+.brand-logo:hover{opacity:1}
+.brand-logo.italic{font-style:italic;font-weight:500}
+.brand-logo.caps{text-transform:uppercase;letter-spacing:0.15em;font-size:17px;font-weight:600}
+.brand-logo.mono{font-family:'Inter',sans-serif;font-weight:700;font-size:20px}
+.brand-logo.script{font-family:'Caveat',cursive;font-weight:700;font-size:32px;letter-spacing:0}
+
+/* ---------- DETAILED FEATURES ---------- */
+.detail{background:var(--cream);padding:140px 0}
+.detail-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  margin-bottom:140px;
+}
+.detail-row:last-child{margin-bottom:0}
+.detail-row.reverse .detail-visual{order:2}
+.detail-text .eyebrow{margin-bottom:18px}
+.detail-text h2{font-size:clamp(32px,3.8vw,48px);margin-bottom:20px}
+.detail-text h2 em{font-style:italic;color:var(--purple);font-weight:500}
+.detail-text p{color:var(--ink-soft);font-size:17px;margin-bottom:28px}
+.detail-list{list-style:none;padding:0;margin:0 0 32px}
+.detail-list li{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:12px 0;border-bottom:1px dashed var(--line);
+  font-size:15px;color:var(--ink);
+}
+.detail-list li:last-child{border-bottom:0}
+.detail-list .check{margin-top:3px;flex-shrink:0}
+.detail-link{
+  color:var(--purple);font-weight:600;font-size:15px;
+  display:inline-flex;align-items:center;gap:6px;
+  border-bottom:2px solid transparent;padding-bottom:2px;
+  transition:border-color .2s;
+}
+.detail-link:hover{border-bottom-color:var(--purple)}
+
+.detail-visual{
+  position:relative;aspect-ratio:4/5;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+}
+.mock-card{
+  position:absolute;background:#fff;border-radius:var(--radius-md);
+  box-shadow:var(--shadow-md);padding:20px;
+}
+
+/* Visual 1: Brand palette mock */
+.v1{
+  background:linear-gradient(135deg,#FFE5B4 0%,#FFB8D1 50%,var(--purple-soft) 100%);
+}
+.v1 .mock-main{
+  left:10%;right:10%;top:12%;bottom:22%;padding:28px;
+  display:flex;flex-direction:column;gap:16px;
+}
+.mock-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.mock-title{font-family:'Fraunces',serif;font-size:22px;font-weight:600}
+.swatch-row{display:flex;gap:10px}
+.swatch{width:38px;height:38px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
+.mock-btn{align-self:flex-start;background:var(--purple);color:#fff;padding:8px 16px;border-radius:var(--radius-pill);font-size:12px;font-weight:600;margin-top:auto}
+.v1 .mock-badge{
+  top:6%;right:4%;padding:14px 18px;
+  display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;
+}
+.v1 .mock-badge .dot{width:10px;height:10px;background:#22C55E;border-radius:50%}
+.v1 .mock-mini{
+  bottom:8%;left:6%;padding:14px;display:flex;align-items:center;gap:10px;
+}
+.mini-bar{width:80px;height:6px;background:var(--line);border-radius:3px;overflow:hidden;position:relative}
+.mini-bar::after{content:"";position:absolute;left:0;top:0;bottom:0;width:68%;background:var(--purple);border-radius:3px}
+
+/* Visual 2: Analytics mock */
+.v2{background:linear-gradient(160deg,var(--purple) 0%,var(--purple-deep) 100%);display:flex;align-items:center;justify-content:center;padding:40px}
+.v2-dash{background:#fff;width:100%;border-radius:var(--radius-md);padding:24px;box-shadow:0 30px 60px rgba(0,0,0,0.25)}
+.dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.dash-title{font-family:'Fraunces',serif;font-size:18px;font-weight:600}
+.dash-tag{font-size:11px;background:var(--purple-soft);color:var(--purple);padding:4px 10px;border-radius:var(--radius-pill);font-weight:600}
+.kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.kpi{background:var(--cream);padding:14px;border-radius:12px}
+.kpi-label{font-size:11px;color:var(--muted);margin-bottom:4px}
+.kpi-value{font-family:'Fraunces',serif;font-size:22px;font-weight:700}
+.kpi-delta{font-size:11px;color:#22C55E;font-weight:600}
+.chart{height:120px;position:relative;display:flex;align-items:flex-end;gap:6px;padding-top:10px}
+.chart div{flex:1;background:linear-gradient(180deg,var(--purple) 0%,#9B6DFF 100%);border-radius:4px 4px 0 0;opacity:.9}
+
+/* Visual 3: Campaign mock */
+.v3{background:linear-gradient(135deg,var(--yellow) 0%,#FFB84A 100%)}
+.v3 .mock-phone{
+  left:16%;right:16%;top:8%;bottom:8%;
+  border-radius:32px;background:#fff;padding:20px 18px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.phone-header{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.phone-avatar{width:36px;height:36px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:14px}
+.phone-name{font-size:13px;font-weight:600}
+.phone-sub{font-size:11px;color:var(--muted)}
+.message{background:var(--cream);padding:10px 12px;border-radius:14px;font-size:12px;max-width:80%}
+.message.sent{background:var(--purple);color:#fff;align-self:flex-end}
+.phone-metric{margin-top:auto;padding:12px;background:var(--cream);border-radius:12px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.phone-metric strong{font-family:'Fraunces',serif;font-size:18px;color:var(--purple)}
+
+/* Visual 3: Content feed mock */
+.v3 .mock-feed{
+  left:14%;right:14%;top:6%;bottom:6%;
+  border-radius:24px;background:#fff;padding:14px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.feed-header{display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.feed-dots{margin-left:auto;color:var(--muted);font-size:14px;letter-spacing:1px}
+.feed-image{
+  position:relative;flex:1;min-height:0;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#FFB8D1 0%,#A78BFA 50%,#5EEAD4 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.feed-tag{
+  position:absolute;top:10px;left:10px;
+  background:rgba(0,0,0,0.55);color:#fff;
+  font-size:9px;font-weight:700;letter-spacing:0.1em;
+  padding:4px 8px;border-radius:6px;
+}
+.feed-play{
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,0.92);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;padding-left:3px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.18);
+}
+.feed-views{
+  position:absolute;bottom:10px;right:10px;
+  background:rgba(0,0,0,0.55);color:#fff;
+  font-size:10px;font-weight:600;
+  padding:4px 8px;border-radius:6px;
+}
+.feed-actions{display:flex;gap:14px;font-size:18px;line-height:1}
+.feed-caption{font-size:11px;line-height:1.45;color:var(--ink)}
+.feed-caption strong{display:block;font-size:11px;margin-bottom:3px}
+.feed-caption p{margin:0;color:var(--ink-soft)}
+.feed-caption p strong{display:inline;margin:0;color:var(--ink)}
+
+/* ---------- EMAIL CAPTURE ---------- */
+.capture{
+  background:var(--purple);color:#fff;padding:90px 0;
+  position:relative;overflow:hidden;
+}
+.capture::before,.capture::after{
+  content:"";position:absolute;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,0.12) 0%,transparent 70%);
+}
+.capture::before{top:-100px;left:-100px}
+.capture::after{bottom:-100px;right:-100px}
+.capture-inner{max-width:640px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.capture h2{color:#fff;font-size:clamp(32px,4vw,48px);margin-bottom:14px}
+.capture h2 em{font-style:italic;color:var(--yellow);font-weight:500}
+.capture p{color:rgba(255,255,255,0.85);font-size:17px;margin-bottom:32px}
+.capture-form{
+  display:flex;gap:10px;background:#fff;padding:8px;border-radius:var(--radius-pill);
+  box-shadow:0 20px 40px rgba(0,0,0,0.18);max-width:520px;margin:0 auto;
+}
+.capture-form input{
+  flex:1;border:0;outline:0;padding:14px 20px;
+  font-family:inherit;font-size:15px;color:var(--ink);background:transparent;border-radius:var(--radius-pill);
+}
+.capture-form button{
+  background:var(--ink);color:#fff;padding:14px 26px;border-radius:var(--radius-pill);
+  font-weight:600;font-size:15px;transition:background .2s, transform .2s;
+}
+.capture-form button:hover{background:#000;transform:translateX(2px)}
+.capture-fine{margin-top:18px;font-size:13px;color:rgba(255,255,255,0.7)}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--mint);padding:120px 0}
+.faq-wrap{max-width:820px;margin:0 auto}
+.faq-item{
+  border-bottom:1px solid var(--line);
+}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{
+  width:100%;text-align:left;
+  padding:26px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;
+  font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--ink);
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--purple)}
+.faq-toggle{
+  flex-shrink:0;width:36px;height:36px;border-radius:50%;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  transition:background .2s, transform .3s ease;
+  border:1px solid var(--line);
+}
+.faq-q:hover .faq-toggle{background:var(--purple-soft)}
+.faq-item.open .faq-toggle{background:var(--purple);color:#fff;transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s ease, padding .3s ease;
+  color:var(--ink-soft);font-size:16px;line-height:1.65;
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 60px 28px 0}
+
+/* ---------- FINAL CTA ---------- */
+.final{
+  background:var(--cream);padding:120px 0;text-align:center;
+  position:relative;overflow:hidden;
+}
+.final::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 1px 1px, rgba(20,18,28,0.08) 1px, transparent 0);
+  background-size:22px 22px;
+  opacity:.5;
+}
+.final-inner{position:relative;z-index:1}
+.final h2{
+  font-size:clamp(48px,7vw,96px);
+  letter-spacing:-0.04em;
+  margin-bottom:24px;
+  font-weight:600;
+}
+.final h2 em{
+  font-style:italic;color:var(--purple);font-weight:400;
+}
+.final p{font-size:19px;color:var(--ink-soft);max-width:520px;margin:0 auto 36px}
+.final-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.scribble{
+  font-family:'Caveat',cursive;color:var(--purple);font-size:26px;
+  display:inline-block;transform:rotate(-4deg);margin-top:30px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:var(--cream);padding:80px 0 40px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.foot-brand .logo{color:var(--cream);margin-bottom:16px}
+.foot-brand p{color:rgba(251,245,230,0.7);font-size:14px;line-height:1.6;max-width:300px}
+.foot-col h4{
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.12em;color:rgba(251,245,230,0.5);
+  margin-bottom:20px;
+}
+.foot-col ul{list-style:none;padding:0;margin:0}
+.foot-col li{margin-bottom:12px}
+.foot-col a{
+  color:rgba(251,245,230,0.85);font-size:14px;
+  transition:color .2s;
+}
+.foot-col a:hover{color:var(--yellow)}
+.foot-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  padding-top:28px;border-top:1px solid rgba(251,245,230,0.15);
+  font-size:13px;color:rgba(251,245,230,0.55);
+}
+.socials{display:flex;gap:12px}
+.socials a{
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(251,245,230,0.25);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--cream);transition:all .2s;
+}
+.socials a:hover{background:var(--purple);border-color:var(--purple);color:#fff}
+
+/* ---------- PACKAGES ---------- */
+.packages{background:var(--cream);padding:120px 0}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:60px}
+.pkg-card{
+  border-radius:var(--radius-lg);padding:36px 32px;
+  background:#fff;border:1.5px solid var(--line);
+  display:flex;flex-direction:column;
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  position:relative;overflow:hidden;
+}
+.pkg-card::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--purple);border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  transition:height .3s ease;
+}
+.pkg-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--purple)}
+.pkg-card:hover::after{height:6px}
+.pkg-card.featured{background:var(--purple);color:#fff;border-color:var(--purple)}
+.pkg-card.featured::after{background:var(--yellow)}
+.pkg-card.featured h3,.pkg-card.featured .pkg-price,.pkg-card.featured .pkg-desc{color:#fff}
+.pkg-card.featured .pkg-list li{color:rgba(255,255,255,0.9)}
+.pkg-card.featured .pkg-list li::before{color:var(--yellow)}
+.pkg-badge{display:inline-block;background:var(--yellow);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:var(--radius-pill);margin-bottom:16px}
+.pkg-name{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:10px}
+.pkg-card.featured .pkg-name{color:rgba(255,255,255,0.6)}
+.pkg-card h3{font-size:24px;margin-bottom:10px}
+.pkg-desc{color:var(--ink-soft);font-size:14px;margin-bottom:20px;line-height:1.55}
+.pkg-price{font-family:'Fraunces',serif;font-size:44px;font-weight:700;color:var(--ink);margin-bottom:24px;letter-spacing:-0.03em}
+.pkg-price span{font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:var(--muted)}
+.pkg-card.featured .pkg-price span{color:rgba(255,255,255,0.6)}
+.pkg-list{list-style:none;padding:0;margin:0 0 28px;flex:1}
+.pkg-list li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--ink);display:flex;align-items:flex-start;gap:10px}
+.pkg-card.featured .pkg-list li{border-bottom-color:rgba(255,255,255,0.2)}
+.pkg-list li:last-child{border-bottom:0}
+.pkg-list li::before{content:"✓";color:var(--purple);font-weight:700;flex-shrink:0;margin-top:1px}
+.pkg-card.featured .pkg-list li::before{color:var(--yellow)}
+.pkg-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.pkg-sub-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--purple);margin-bottom:32px;display:flex;align-items:center;gap:10px}
+.pkg-sub-label::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---------- STUDIO ---------- */
+.studio{background:var(--ink);color:var(--cream);padding:120px 0;position:relative;overflow:hidden}
+.studio::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);background-size:22px 22px;pointer-events:none}
+.studio-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-bottom:80px;position:relative;z-index:1}
+.studio-intro h2{color:var(--cream);font-size:clamp(38px,5vw,66px)}
+.studio-intro h2 em{color:var(--yellow);font-style:italic;font-weight:400}
+.studio-intro p{color:rgba(251,245,230,0.75);font-size:17px;line-height:1.65;margin-bottom:24px}
+.studio-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--yellow);padding:8px 14px;border-radius:var(--radius-pill);background:rgba(255,213,74,0.12);margin-bottom:24px}
+.studio-eyebrow::before{content:"";width:6px;height:6px;background:var(--yellow);border-radius:50%}
+.studio-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:36px;position:relative;z-index:1;transition:background .3s ease,border-color .3s ease,transform .3s ease}
+.studio-card:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,213,74,0.4);transform:translateY(-4px)}
+.studio-card-icon{width:56px;height:56px;border-radius:16px;background:rgba(255,213,74,0.15);color:var(--yellow);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:26px}
+.studio-card h3{color:var(--cream);font-size:22px;margin-bottom:12px}
+.studio-card p{color:rgba(251,245,230,0.7);font-size:14px;line-height:1.6;margin-bottom:20px}
+.studio-card-price{font-family:'Fraunces',serif;font-size:36px;font-weight:700;color:var(--yellow);margin-bottom:20px;letter-spacing:-0.02em}
+.studio-list{list-style:none;padding:0;margin:0}
+.studio-list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.1);font-size:14px;color:rgba(251,245,230,0.8);display:flex;align-items:flex-start;gap:10px}
+.studio-list li:last-child{border-bottom:0}
+.studio-list li::before{content:"✦";color:var(--yellow);flex-shrink:0;font-size:10px;margin-top:3px}
+.studio-events{position:relative;z-index:1;margin-top:60px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:40px}
+.studio-events h3{color:var(--cream);font-size:28px;margin-bottom:16px}
+.studio-events p{color:rgba(251,245,230,0.7);font-size:15px;margin-bottom:28px}
+.event-pills{display:flex;flex-wrap:wrap;gap:10px}
+.event-pill{background:rgba(255,213,74,0.12);color:var(--yellow);border:1px solid rgba(255,213,74,0.25);padding:8px 16px;border-radius:var(--radius-pill);font-size:13px;font-weight:600}
+.studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;position:relative;z-index:1}
+.btn-yellow-outline{display:inline-flex;align-items:center;gap:8px;justify-content:center;padding:13px 22px;border-radius:var(--radius-pill);font-weight:600;font-size:15px;white-space:nowrap;border:1.5px solid var(--yellow);color:var(--yellow);transition:background .2s,color .2s}
+.btn-yellow-outline:hover{background:var(--yellow);color:var(--ink)}
+
+/* ---------- ANIMATIONS ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 960px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .hero{padding:56px 0 70px}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-visual{max-width:420px;margin:0 auto;justify-self:center}
+  .section{padding:80px 0}
+  .feat-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .logo-row{grid-template-columns:repeat(2,1fr);gap:28px}
+  .detail{padding:80px 0}
+  .detail-row{grid-template-columns:1fr;gap:40px;margin-bottom:80px}
+  .detail-row.reverse .detail-visual{order:0}
+  .detail-visual{max-width:440px;margin:0 auto;width:100%}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .foot-brand{grid-column:1/-1}
+  .capture-form{flex-direction:column;border-radius:var(--radius-md);padding:10px}
+  .capture-form input,.capture-form button{width:100%;border-radius:var(--radius-pill)}
+  .faq-q{font-size:18px;padding:22px 0}
+  .faq-item.open .faq-a{padding:0 0 24px 0}
+  .final h2{font-size:52px}
+  .topbar{font-size:12px;padding:8px 14px}
+  .pkg-grid{grid-template-columns:1fr;gap:20px}
+  .pkg-grid-2{grid-template-columns:1fr}
+  .studio-intro{grid-template-columns:1fr;gap:40px}
+  .studio-grid{grid-template-columns:1fr;gap:20px}
+}
+
+@media (max-width: 520px){
+  .container{padding:0 20px}
+  .feat-grid{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+  .hero p.lead{font-size:17px}
+  .btn{padding:12px 18px;font-size:14px}
+  .foot-grid{grid-template-columns:1fr}
+  .logo-row{grid-template-columns:repeat(2,1fr)}
+  .nav-cta .btn-ghost{display:none}
+  .logo-img{height:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="RoJu Digital Marketing">
+      <img src="roju-digitalmarketing-logo.png" alt="RoJu Digital Marketing" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="#services">Servicios</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#studio">RoJu Studio</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">Sobre nosotros</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary" target="_blank">Empezar gratis</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="eyebrow">RoJu Digital Marketing · Hecha para PYMES</span>
+      <h1>
+        Hacé crecer tu marca,<br>
+        <span class="underline">sin perder</span> <em>el alma.</em>
+      </h1>
+      <p class="lead">
+        En RoJu Digital Marketing ayudamos a pequeños y medianos emprendedores a construir marcas memorables, campañas que convierten y contenido que sus clientes de verdad quieren ver.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Empezar mi proyecto →</a>
+        <a href="#proof" class="btn btn-ghost">Ver casos reales</a>
+      </div>
+      <div class="hero-meta">
+        <span><span class="check">✓</span> Sin contratos largos</span>
+        <span><span class="check">✓</span> Consulta inicial gratis</span>
+        <span><span class="check">✓</span> Respuesta en 24h</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="visual-blob"></div>
+      <div class="visual-inner">
+        <!-- Collage de marca: composición editorial abstracta -->
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.5" fill="#14121C" opacity="0.35"/>
+            </pattern>
+          </defs>
+
+          <!-- Círculo grande detrás (color cálido) -->
+          <circle cx="180" cy="200" r="150" fill="#FFE5B4"/>
+
+          <!-- Patrón de puntos -->
+          <rect x="40" y="70" width="80" height="80" fill="url(#dots)" rx="8"/>
+
+          <!-- Gran letra "R" serif como pieza hero -->
+          <text x="90" y="280" font-family="Fraunces, Georgia, serif" font-size="220" font-weight="700" fill="#193751" font-style="italic">R</text>
+
+          <!-- Estrella estilo Cool Auntie (amarilla) -->
+          <g transform="translate(280, 80) rotate(12)">
+            <path d="M0 -36 L10 -12 L36 -10 L16 8 L22 34 L0 20 L-22 34 L-16 8 L-36 -10 L-10 -12 Z"
+                  fill="#FFD54A" stroke="#14121C" stroke-width="2.5" stroke-linejoin="round"/>
+          </g>
+
+          <!-- Estrella roja chica abajo derecha -->
+          <g transform="translate(350, 310) rotate(-18)">
+            <path d="M0 -22 L6 -7 L22 -6 L10 4 L14 20 L0 12 L-14 20 L-10 4 L-22 -6 L-6 -7 Z"
+                  fill="#C23B3B" stroke="#14121C" stroke-width="2" stroke-linejoin="round"
+                  stroke-dasharray="1 3"/>
+          </g>
+
+          <!-- Tarjeta flotante: gráfico mini -->
+          <g transform="translate(220, 150) rotate(6)">
+            <rect x="0" y="0" width="130" height="90" rx="12" fill="#fff" stroke="#14121C" stroke-width="1.5"/>
+            <text x="12" y="22" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#6B6478" letter-spacing="1">ALCANCE</text>
+            <text x="12" y="46" font-family="Fraunces, serif" font-size="22" font-weight="700" fill="#193751">48.2K</text>
+            <text x="12" y="60" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#22C55E">↑ 23% este mes</text>
+            <!-- Mini chart bars -->
+            <rect x="12" y="70" width="6" height="10" fill="#193751" rx="1"/>
+            <rect x="22" y="66" width="6" height="14" fill="#193751" rx="1"/>
+            <rect x="32" y="60" width="6" height="20" fill="#193751" rx="1"/>
+            <rect x="42" y="55" width="6" height="25" fill="#193751" rx="1"/>
+            <rect x="52" y="48" width="6" height="32" fill="#193751" rx="1"/>
+            <rect x="62" y="42" width="6" height="38" fill="#FFD54A" rx="1"/>
+          </g>
+
+          <!-- Tarjeta flotante: paleta -->
+          <g transform="translate(60, 260) rotate(-5)">
+            <rect x="0" y="0" width="150" height="54" rx="10" fill="#fff" stroke="#14121C" stroke-width="1.5"/>
+            <text x="12" y="20" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#6B6478" letter-spacing="1">TU PALETA</text>
+            <circle cx="20" cy="38" r="8" fill="#193751" stroke="#14121C" stroke-width="1"/>
+            <circle cx="42" cy="38" r="8" fill="#FFD54A" stroke="#14121C" stroke-width="1"/>
+            <circle cx="64" cy="38" r="8" fill="#C23B3B" stroke="#14121C" stroke-width="1"/>
+            <circle cx="86" cy="38" r="8" fill="#FBF5E6" stroke="#14121C" stroke-width="1"/>
+            <circle cx="108" cy="38" r="8" fill="#FFE5B4" stroke="#14121C" stroke-width="1"/>
+          </g>
+
+          <!-- Tag "Hecho con ♥" -->
+          <g transform="translate(260, 300) rotate(-8)">
+            <rect x="0" y="0" width="110" height="32" rx="16" fill="#193751"/>
+            <text x="14" y="21" font-family="Caveat, cursive" font-size="18" font-weight="700" fill="#FFD54A">marca viva</text>
+            <circle cx="92" cy="16" r="4" fill="#C23B3B"/>
+          </g>
+
+          <!-- Squiggle decorativo -->
+          <path d="M30 380 Q45 365 60 380 T90 380 T120 380"
+                stroke="#193751" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+          <!-- Puntitos sueltos -->
+          <circle cx="380" cy="140" r="4" fill="#193751"/>
+          <circle cx="20" cy="200" r="4" fill="#C23B3B"/>
+          <circle cx="370" cy="220" r="3" fill="#FFD54A" stroke="#14121C" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <!-- Decorative stars -->
+      <svg class="star star-1" viewBox="0 0 24 24" fill="#FFD54A"><path d="M12 0l3 9h9l-7.5 5.5L19 24l-7-5.5L5 24l2.5-9.5L0 9h9z"/></svg>
+      <svg class="star star-2" viewBox="0 0 24 24" fill="#193751"><path d="M12 0l3 9h9l-7.5 5.5L19 24l-7-5.5L5 24l2.5-9.5L0 9h9z"/></svg>
+
+      <!-- Floating cards -->
+      <div class="float-card fc-1">
+        <div class="dot" style="background:var(--purple-soft);color:var(--purple)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12l4 4L21 6"/></svg>
+        </div>
+        <div>Campaña lista<br><span style="color:var(--muted);font-size:11px">hace 2 minutos</span></div>
+      </div>
+      <div class="float-card fc-2">
+        <div class="dot" style="background:#FFE5B4;color:#C23B3B">✨</div>
+        <div>+312% engagement<br><span style="color:var(--muted);font-size:11px">último mes</span></div>
+      </div>
+      <div class="float-card fc-3">
+        <div class="dot" style="background:var(--ink);color:var(--yellow);font-weight:700">@</div>
+        <div>24 nuevos leads<br><span style="color:var(--muted);font-size:11px">esta semana</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURES -->
+<section class="features section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nuestros servicios</span>
+      <h2>Todo lo que tu negocio <em>necesita</em>, en un solo lugar.</h2>
+      <p>Pensado para emprendedores que quieren crecer con cabeza, sin quemarse haciendo malabares con 10 herramientas distintas.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Branding que se recuerda</h3>
+        <p>Identidades visuales con personalidad: desde el logo hasta el tono de voz. Tu marca va a sentirse tuya, y nadie va a poder copiarla.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>Contenido que conecta</h3>
+        <p>Redes sociales, newsletters, fotos y videos pensados para tu audiencia real. Nada de contenido genérico hecho en 5 minutos.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Campañas que venden</h3>
+        <p>Anuncios en Meta, Google y TikTok con métricas claras. Sabés en qué se invierte cada colón y cuánto te está devolviendo.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:var(--purple)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Websites que convierten</h3>
+        <p>Diseño y desarrollo de sitios web profesionales, rápidos y optimizados para ventas. En alianza con <strong>The Cool Uncle</strong>, tu negocio va a tener presencia digital de verdad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof" id="proof">
+  <div class="container">
+    <h3>Ayudamos a <strong>emprendedores</strong> a hacer crecer lo suyo</h3>
+    <div class="logo-row">
+      <div class="brand-logo italic">The Cool Auntie</div>
+      <div class="brand-logo italic">The Cool Uncle</div>
+      <div class="brand-logo script">Nana's Nails</div>
+      <div class="brand-logo caps">FisioVital</div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL SECTIONS -->
+<section class="detail" id="work">
+  <div class="container">
+
+    <div class="detail-row reveal">
+      <div class="detail-text">
+        <span class="eyebrow">Estrategia de marca</span>
+        <h2>Definí cómo te ven, antes de que <em>lo decidan por vos.</em></h2>
+        <p>Hacemos deep-dives con tu equipo para entender qué te hace diferente, y después lo traducimos en paletas, tipografías y mensajes que se sienten inevitables.</p>
+        <ul class="detail-list">
+          <li><span class="check">✓</span> Logo, paleta y sistema tipográfico</li>
+          <li><span class="check">✓</span> Tono de voz y manual de marca</li>
+          <li><span class="check">✓</span> Plantillas listas para tu equipo</li>
+        </ul>
+      </div>
+      <div class="detail-visual v1">
+        <div class="mock-card mock-main">
+          <div class="mock-label">Tu paleta</div>
+          <div class="mock-title">Marca &amp; colores</div>
+          <div class="swatch-row">
+            <div class="swatch" style="background:#193751"></div>
+            <div class="swatch" style="background:#FFD54A"></div>
+            <div class="swatch" style="background:#C23B3B"></div>
+            <div class="swatch" style="background:#FBF5E6"></div>
+          </div>
+          <div style="font-family:'Fraunces',serif;font-size:28px;font-weight:600;margin-top:10px">Aa Bb Cc</div>
+          <button class="mock-btn">Aplicar →</button>
+        </div>
+        <div class="mock-card mock-badge">
+          <span class="dot"></span> En vivo
+        </div>
+        <div class="mock-card mock-mini">
+          <span class="mini-bar"></span>
+          <span style="font-size:11px;font-weight:600">68%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-row reverse reveal">
+      <div class="detail-text">
+        <span class="eyebrow">Analítica &amp; crecimiento</span>
+        <h2>Tus números, <em>contados en español.</em></h2>
+        <p>Reportes mensuales que cualquiera entiende. Sabés qué funciona, qué hay que ajustar, y en qué plataforma gastar el próximo presupuesto.</p>
+        <ul class="detail-list">
+          <li><span class="check">✓</span> Dashboard con tus KPIs clave</li>
+          <li><span class="check">✓</span> Reporte mensual en reunión 1:1</li>
+          <li><span class="check">✓</span> Alertas automáticas cuando algo cambia</li>
+        </ul>
+      </div>
+      <div class="detail-visual v2">
+        <div class="v2-dash">
+          <div class="dash-head">
+            <div class="dash-title">Resumen mensual</div>
+            <div class="dash-tag">Marzo</div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi"><div class="kpi-label">Alcance</div><div class="kpi-value">48.2K</div><div class="kpi-delta">↑ 23%</div></div>
+            <div class="kpi"><div class="kpi-label">Leads</div><div class="kpi-value">312</div><div class="kpi-delta">↑ 41%</div></div>
+          </div>
+          <div class="chart">
+            <div style="height:30%"></div>
+            <div style="height:50%"></div>
+            <div style="height:38%"></div>
+            <div style="height:72%"></div>
+            <div style="height:60%"></div>
+            <div style="height:88%"></div>
+            <div style="height:95%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-row reveal">
+      <div class="detail-text">
+        <span class="eyebrow">Creación de contenido</span>
+        <h2>Contenido que <em>sí se mira</em> (y se comparte).</h2>
+        <p>Reels, posts, fotos y videos pensados para tu marca y tu audiencia real. Nada de plantillas genéricas ni stock aburrido: producimos contenido con intención, que para el scroll y conecta de verdad.</p>
+        <ul class="detail-list">
+          <li><span class="check">✓</span> Reels y videos cortos para Instagram, TikTok y YouTube Shorts</li>
+          <li><span class="check">✓</span> Fotografía de producto, lifestyle y detrás-de-cámara</li>
+          <li><span class="check">✓</span> Calendario de contenido mensual con copy listo para publicar</li>
+          <li><span class="check">✓</span> Diseño de carruseles, historias y plantillas para tu marca</li>
+        </ul>
+      </div>
+      <div class="detail-visual v3">
+        <div class="mock-card mock-feed">
+          <div class="feed-header">
+            <div class="phone-avatar">R</div>
+            <div>
+              <div class="phone-name">rojudigitalmarketing</div>
+              <div class="phone-sub">Patrocinado</div>
+            </div>
+            <div class="feed-dots">•••</div>
+          </div>
+          <div class="feed-image">
+            <span class="feed-tag">REEL</span>
+            <span class="feed-play">▶</span>
+            <span class="feed-views">128K vistas</span>
+          </div>
+          <div class="feed-actions">
+            <span>♥</span><span>💬</span><span>↗</span>
+          </div>
+          <div class="feed-caption">
+            <strong>4,287 me gusta</strong>
+            <p><strong>rojudigitalmarketing</strong> el secreto detrás de un buen reel no es el equipo, es la idea ✨</p>
+          </div>
+          <div class="phone-metric">
+            <span>Engagement promedio</span>
+            <strong>+312%</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-row reverse reveal">
+      <div class="detail-text">
+        <span class="eyebrow">Creación de websites · En alianza con The Cool Uncle</span>
+        <h2>Tu negocio se merece un sitio web que <em>realmente trabaje</em> para vos.</h2>
+        <p>Junto a nuestros aliados de <strong>The Cool Uncle</strong>, diseñamos y desarrollamos sitios web profesionales que no solo se ven bien, sino que generan resultados: más consultas, más ventas, más clientes.</p>
+        <ul class="detail-list">
+          <li><span class="check">✓</span> Diseño a medida, sin plantillas genéricas</li>
+          <li><span class="check">✓</span> Optimizado para velocidad, SEO y mobile</li>
+          <li><span class="check">✓</span> Integración con tienda en línea, WhatsApp y formularios</li>
+          <li><span class="check">✓</span> Entregamos el sitio listo para que vos lo administrés</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="detail-link">Quiero mi website →</a>
+      </div>
+      <div class="detail-visual" style="background:linear-gradient(135deg,var(--purple-soft) 0%,var(--cream) 100%);display:flex;align-items:center;justify-content:center;padding:40px">
+        <div style="background:#fff;width:100%;border-radius:var(--radius-md);box-shadow:var(--shadow-lg);overflow:hidden">
+          <div style="background:var(--cream-deep);padding:14px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)">
+            <div style="display:flex;gap:6px">
+              <div style="width:10px;height:10px;border-radius:50%;background:#FF5F57"></div>
+              <div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E"></div>
+              <div style="width:10px;height:10px;border-radius:50%;background:#28C840"></div>
+            </div>
+            <div style="flex:1;background:#fff;border-radius:var(--radius-pill);padding:6px 14px;font-size:11px;color:var(--muted);text-align:center;border:1px solid var(--line)">tunegocio.com</div>
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:14px">
+            <div style="height:10px;background:var(--purple);border-radius:4px;width:55%"></div>
+            <div style="height:7px;background:var(--line);border-radius:4px;width:80%"></div>
+            <div style="height:7px;background:var(--line);border-radius:4px;width:65%"></div>
+            <div style="display:flex;gap:10px;margin-top:6px">
+              <div style="background:var(--purple);color:#fff;padding:8px 16px;border-radius:var(--radius-pill);font-size:11px;font-weight:700">Contáctanos →</div>
+              <div style="border:1.5px solid var(--line);padding:8px 16px;border-radius:var(--radius-pill);font-size:11px;font-weight:600;color:var(--ink)">Ver servicios</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px">
+              <div style="background:var(--cream);border-radius:12px;height:64px;border:1px solid var(--line)"></div>
+              <div style="background:var(--purple-soft);border-radius:12px;height:64px;border:1px solid var(--line)"></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:4px">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--yellow);flex-shrink:0"></div>
+              <div style="font-size:11px;font-weight:600;color:var(--ink)">En alianza con <span style="color:var(--purple)">The Cool Uncle</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages section" id="paquetes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nuestros paquetes</span>
+      <h2>Encontrá el plan que <em>se ajusta</em> a tu negocio.</h2>
+      <p>Desde el manejo completo de tus redes hasta la creación de contenido estratégico listo para publicar.</p>
+    </div>
+
+    <!-- Manejo de redes y estrategia -->
+    <div class="pkg-sub-label">Manejo de Redes Sociales &amp; Estrategia</div>
+    <div class="pkg-grid reveal">
+      <div class="pkg-card featured">
+        <div class="pkg-badge">Más completo</div>
+        <div class="pkg-name">Manejo completo</div>
+        <h3>Redes Sociales</h3>
+        <p class="pkg-desc">Ideal si querés enfocarte en tu negocio. De las redes nos encargamos nosotros. Planeamos, grabamos y editamos tu contenido, listo para publicar.</p>
+        <div class="pkg-price">$800 <span>/ mes</span></div>
+        <ul class="pkg-list">
+          <li>Planeamiento y estrategia de marketing digital</li>
+          <li>Creación de contenido (carruseles)</li>
+          <li>Creación de contenido (reels)</li>
+          <li>Programación de contenido</li>
+          <li>Respondemos comentarios</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-yellow">Empezar →</a>
+      </div>
+
+      <div class="pkg-card">
+        <div class="pkg-name">Contenido estratégico</div>
+        <h3>Listo para publicar</h3>
+        <p class="pkg-desc">5 horas de grabación y 10 videos editados listos para publicar. Tú eliges cuándo publicar, RoJu te da un calendario recomendado.</p>
+        <div class="pkg-price">$450 <span>/ mes</span></div>
+        <ul class="pkg-list">
+          <li>Planeamiento y estrategia de marketing digital</li>
+          <li>Grabación, creación y edición de contenido</li>
+          <li>10 videos editados listos para publicar</li>
+          <li>Enfoque en objetivos de venta y cliente ideal</li>
+          <li>Calendario recomendado de publicación</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Me interesa →</a>
+      </div>
+
+      <div class="pkg-card">
+        <div class="pkg-name">TikTok</div>
+        <h3>Manejo de TikTok</h3>
+        <p class="pkg-desc">Estrategias pensadas para el público de TikTok, muy diferente al de otras plataformas. Hacemos todo, desde la estrategia hasta el seguimiento.</p>
+        <div class="pkg-price">$500 <span>/ mes</span></div>
+        <ul class="pkg-list">
+          <li>Estrategia enfocada en el público TikTok</li>
+          <li>Grabación y edición profesional</li>
+          <li>Publicación y seguimiento</li>
+          <li>Entrega de 15 videos y carruseles</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Me interesa →</a>
+      </div>
+    </div>
+
+    <!-- Estrategia digital -->
+    <div class="pkg-sub-label">Estrategia Digital</div>
+    <div class="pkg-grid-2 reveal" style="margin-bottom:60px">
+      <div class="pkg-card">
+        <div class="pkg-name">Solo estrategia</div>
+        <h3>Estrategia Digital Mensual</h3>
+        <p class="pkg-desc">Ideal si no sabés qué publicar pero querés mantener viva tu presencia en redes. Te brindamos una estrategia mensual adaptada a tus objetivos.</p>
+        <div class="pkg-price">$300 <span>/ mes</span></div>
+        <ul class="pkg-list">
+          <li>Reunión previa para setear expectativas</li>
+          <li>Definición de objetivos de venta y tono de comunicación</li>
+          <li>Estrategia con ideas de videos y carruseles</li>
+          <li>Copies y guiones listos para grabar</li>
+          <li>Carruseles listos para copiar en Canva</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Me interesa →</a>
+      </div>
+
+      <div class="pkg-card" style="background:var(--mint)">
+        <div class="pkg-name">Creación de contenido · Negocios</div>
+        <h3>RoJu para Negocios</h3>
+        <p class="pkg-desc">Día completo de grabación para restaurantes, tiendas y negocios. Close ups de productos, tomas dinámicas y videos estratégicos para tu público.</p>
+        <div class="pkg-price">$250–$375</div>
+        <ul class="pkg-list">
+          <li>5 horas de grabación completa</li>
+          <li>10 videos editados (2 por semana + 2 extra)</li>
+          <li>iPhone (toque orgánico) o cámara semiprofesional</li>
+          <li>Trends, ganchos visuales y tomas dinámicas</li>
+          <li>Fotos para portada de reels incluidas</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Me interesa →</a>
+      </div>
+    </div>
+
+    <!-- Marcas personales -->
+    <div class="pkg-sub-label">Marcas Personales</div>
+    <div class="pkg-grid-2 reveal">
+      <div class="pkg-card">
+        <div class="pkg-name">Creación de contenido · Marcas personales</div>
+        <h3>RoJu para Marcas Personales</h3>
+        <p class="pkg-desc">Contenido auténtico con guía estratégica de marketing para que sepas cómo hablarle a tu consumidor. B-roll, ganchos visuales y videos de relleno incluidos.</p>
+        <div class="pkg-price">$200</div>
+        <ul class="pkg-list">
+          <li>5 horas de grabación</li>
+          <li>10 videos editados</li>
+          <li>Aporte creativo y guía estratégica de marketing</li>
+          <li>Videos con ganchos visuales</li>
+          <li>B-Roll y videos de relleno</li>
+        </ul>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Me interesa →</a>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;padding:40px;background:var(--purple-soft);border-radius:var(--radius-lg)">
+        <div style="text-align:center;max-width:340px">
+          <div style="font-size:48px;margin-bottom:16px">🎬</div>
+          <h3 style="font-size:28px;margin-bottom:12px">¿No sabés cuál paquete es para vos?</h3>
+          <p style="color:var(--ink-soft);font-size:15px;margin-bottom:24px">Contanos qué necesita tu negocio y te armamos una propuesta a medida, sin compromiso.</p>
+          <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Consulta gratis →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROJU STUDIO -->
+<section class="studio" id="studio">
+  <div class="container">
+    <div class="studio-intro reveal">
+      <div>
+        <span class="studio-eyebrow">RoJu Studio</span>
+        <h2>Tus momentos más especiales, <em>para siempre.</em></h2>
+        <p>RoJu Studio es el brazo audiovisual dedicado a eventos especiales. Captamos bodas, celebraciones y momentos únicos con una mirada honesta y emotiva.</p>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn-yellow-outline">Consultar disponibilidad →</a>
+      </div>
+      <div style="position:relative">
+        <!-- Studio visual -->
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-lg);padding:40px;text-align:center">
+          <div style="font-family:'Fraunces',serif;font-size:80px;font-weight:700;color:var(--yellow);letter-spacing:-0.04em;line-height:1">R<em style="color:rgba(255,255,255,0.15)">o</em>J<em style="color:rgba(255,255,255,0.15)">u</em></div>
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px">Studio</div>
+          <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px">
+            <div style="background:rgba(255,213,74,0.12);border:1px solid rgba(255,213,74,0.25);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px">
+              <span style="font-size:20px">💍</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.85);font-weight:500">Bodas</span>
+              <span style="margin-left:auto;font-family:'Fraunces',serif;font-size:18px;color:var(--yellow);font-weight:700">$500</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px">
+              <span style="font-size:20px">🎉</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.85);font-weight:500">Eventos especiales</span>
+              <span style="margin-left:auto;font-size:12px;color:rgba(255,255,255,0.5)">Consultar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wedding package -->
+    <div class="studio-grid reveal">
+      <div class="studio-card">
+        <div class="studio-card-icon">💍</div>
+        <h3>Paquete de Bodas</h3>
+        <p>Cobertura completa del día más importante. Grabación orgánica con iPhone y cámara semiprofesional para capturar cada momento con autenticidad y calidad.</p>
+        <div class="studio-card-price">$500</div>
+        <ul class="studio-list">
+          <li>Cobertura el día del evento (6–8 horas)</li>
+          <li>Getting ready</li>
+          <li>Ceremonia completa</li>
+          <li>Detalles: vestido, decoración, comida</li>
+          <li>Momentos espontáneos y fiesta</li>
+          <li>Trends o videos que quieran recrear</li>
+          <li>Todo el material en bruto (entrega 24–48h)</li>
+        </ul>
+      </div>
+      <div class="studio-card">
+        <div class="studio-card-icon">🎬</div>
+        <h3>Entregables de Boda</h3>
+        <p>Videos editados pensados para revivir y compartir. Cada entregable tiene un propósito emotivo y narrativo distinto.</p>
+        <div style="height:8px"></div>
+        <ul class="studio-list">
+          <li>Recap vertical de la ceremonia</li>
+          <li>Recap del getting ready</li>
+          <li>Recap de la fiesta</li>
+          <li>Video con entrevistas a invitados y familiares (horizontal)</li>
+          <li>Video de momento específico: primer baile, first look, cortar el pastel, recepción, etc.</li>
+        </ul>
+        <div style="margin-top:24px;padding:16px;background:rgba(255,213,74,0.1);border-radius:12px;border:1px solid rgba(255,213,74,0.2)">
+          <p style="color:rgba(251,245,230,0.85);font-size:13px;line-height:1.55;margin:0">📦 Todo incluido en el paquete de $500. Sin costos ocultos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Events section -->
+    <div class="studio-events reveal">
+      <h3>También cubrimos eventos especiales</h3>
+      <p>Además de bodas, RoJu Studio captura todo tipo de celebraciones y eventos. Consultanos por disponibilidad y precios según el evento.</p>
+      <div class="event-pills">
+        <span class="event-pill">💧 Bautizos</span>
+        <span class="event-pill">👑 Quinceañeras</span>
+        <span class="event-pill">🎂 Cumpleaños</span>
+        <span class="event-pill">🏢 Eventos de empresa</span>
+        <span class="event-pill">🎊 Inauguraciones</span>
+        <span class="event-pill">🍼 Baby Showers</span>
+        <span class="event-pill">✨ Gender Reveals</span>
+        <span class="event-pill">👶 Nacimientos</span>
+        <span class="event-pill">+ más</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq section" id="faq" style="padding:120px 0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Lo que <em>siempre</em> nos preguntan.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>¿Con qué tamaño de negocios trabajan?</span>
+          <span class="faq-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          Trabajamos con emprendedores y PYMES, desde proyectos que recién arrancan hasta marcas con 5–50 colaboradores. Si tenés un presupuesto claro y ganas de crecer, encontramos cómo ayudarte.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>¿Cuánto tardan en arrancar un proyecto?</span>
+          <span class="faq-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          Después de la reunión inicial, solemos arrancar en 5–7 días hábiles. Primero definimos alcance y tiempos, y firmamos un acuerdo corto y claro. Nada de contratos de 20 páginas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>¿Manejan pauta en redes (ads)?</span>
+          <span class="faq-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          Sí. Gestionamos campañas en Meta Ads (Instagram/Facebook), Google Ads y TikTok Ads. El presupuesto de pauta es aparte de nuestros honorarios, y siempre lo decidís vos con nuestra recomendación.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>¿Hay contrato mínimo?</span>
+          <span class="faq-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          Para proyectos puntuales (como un branding), no hay contrato mensual. Para servicios continuos (como manejo de redes), pedimos un mínimo de 3 meses para que los resultados sean reales, pero después es mes a mes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>¿Trabajan solo en Costa Rica?</span>
+          <span class="faq-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          Estamos basados en San José, pero trabajamos remoto con clientes en toda Latinoamérica y EE.UU.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>¿Cuánto cuesta?</span>
+          <span class="faq-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          ¡Gran pregunta! Cada negocio es distinto, por eso preferimos no darte una tarifa genérica que probablemente no se ajuste a lo que necesitás. <strong>La consulta inicial es 100% gratis</strong>: 30 minutos para conocernos, entender tu proyecto y armarte una propuesta hecha a tu medida, sin compromiso. Mandanos un WhatsApp al <a href="https://wa.me/50672950167" target="_blank" rel="noopener" style="color:var(--purple);font-weight:600;text-decoration:underline">+506 7295-0167</a> y te respondemos en menos de 24 horas. ¡Hablemos! 💬
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="about">
+  <div class="container final-inner reveal">
+    <h2>¿Hacemos <em>algo grande</em><br>juntos?</h2>
+    <p>30 minutos de llamada, cero compromiso. Te contamos qué haríamos nosotros si fuera nuestro negocio.</p>
+    <div class="final-actions">
+      <a href="https://wa.me/50672950167" target="_blank" rel="noopener" class="btn btn-primary">Agendar consulta gratis →</a>
+    </div>
+    <div class="scribble">nos vemos pronto ✨</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo-wrap">
+          <img src="roju-digitalmarketing-logo.png" alt="RoJu Digital Marketing" class="foot-logo-img">
+        </div>
+        <p>Agencia de marketing para emprendedores que quieren crecer sin perder lo que los hace especiales. Hecho con ♥ desde San José, Costa Rica.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#services">Social Media</a></li>
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#services">Contenido</a></li>
+          <li><a href="#services">Desarrollo Web</a></li>
+          <li><a href="#studio">RoJu Studio</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>RoJu Studio</h4>
+        <ul>
+          <li><a href="#studio">Bodas</a></li>
+          <li><a href="#studio">Eventos especiales</a></li>
+          <li><a href="https://www.instagram.com/roju.studio/" target="_blank" rel="noopener">@roju.studio</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/50672950167" target="_blank" rel="noopener">+506 7295-0167</a></li>
+          <li><a href="https://www.instagram.com/roju.marketingdigital/" target="_blank" rel="noopener">@roju.marketingdigital</a></li>
+          <li><a href="#">San José, CR</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 RoJu Digital Marketing. Todos los derechos reservados.</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/roju.marketingdigital/" target="_blank" rel="noopener" aria-label="Instagram RoJu Marketing Digital"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/50672950167" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Reveal on scroll (intersection observer)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Email form feedback
+function handleSubscribe(form) {
+  const btn = form.querySelector('button');
+  const input = form.querySelector('input');
+  const original = btn.textContent;
+  btn.textContent = '¡Listo! ✓';
+  btn.style.background = '#22C55E';
+  input.value = '';
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.style.background = '';
+  }, 2400);
+}
+
+// Mobile menu (simple toggle)
+document.querySelector('.hamburger')?.addEventListener('click', () => {
+  const links = document.querySelector('.nav-links');
+  if (links.style.display === 'flex') {
+    links.style.display = '';
+  } else {
+    links.style.display = 'flex';
+    links.style.position = 'absolute';
+    links.style.top = '72px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.flexDirection = 'column';
+    links.style.background = 'var(--cream)';
+    links.style.padding = '24px 28px';
+    links.style.borderBottom = '1px solid var(--line)';
+  }
+});
+</script>
+
+</body>
+</html>
